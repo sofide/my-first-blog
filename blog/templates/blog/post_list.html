@@ -15,11 +15,13 @@
         </div>
 
 
-        <div>
-            <p> Published: 02/01/16, 22:51</p>
-            <h2>Este es un titulo de un post</h2>
-            <p> Blablajsjflaslfsdjñfljsfljasf POST!ñlaksjflsjf</p>
-        </div>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaks}}</p>
+            </div>
+        {% endfor %}
     </body>
 
 
